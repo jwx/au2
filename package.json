@@ -1,6 +1,6 @@
 {
   "name": "au2",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "",
   "main": "lib/index.js",
   "files": [
@@ -8,13 +8,14 @@
     "bin"
   ],
   "bin": {
-    "au2": "bin/au2.js"
+    "au2": "./bin/au2.js"
   },
   "scripts": {
     "start": "node lib/index.js",
     "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test2": "echo \"Error: no test2 specified\" && exit 0"
+    "test2": "echo \"Error: no test2 specified\" && exit 0",
+    "test5": "echo \"Error: no test2 specified\" && exit 0"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,13 @@
   },
   "homepage": "https://github.com/jwx/au2#readme",
   "devDependencies": {
-    "cross-spawn": "^6.0.5",
-    "rollup": "^1.20.0"
+    "path": "^0.12.7",
+    "rollup": "^1.20.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslib": "^1.10.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "cross-spawn": "^6.0.5"
   }
 }

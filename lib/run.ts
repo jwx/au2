@@ -1,6 +1,6 @@
 const spawn = require('cross-spawn');
 
-module.exports = function (command, args = [], dir = '.') {
+export default function (command, args = [], dir = '.') {
     return new Promise((resolve, reject) => {
         const proc = spawn(command, args, { stdio: 'inherit', cwd: dir });
 
