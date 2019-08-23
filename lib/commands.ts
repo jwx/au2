@@ -23,10 +23,4 @@ export default {
         passThroughArgs: false,
         requiresProject: false,
     },
-    ls: {
-        cmd: 'ls',
-        args: [],
-        passThroughArgs: true,
-        requiresProject: false,
-    },
 };

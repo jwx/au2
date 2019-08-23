@@ -16,9 +16,7 @@ export default {
     },
     "build": {
         description: "Builds the app.",
-        args: [
-            { '--prod': "Build for production", },
-        ],
+        args: [],
     },
     "help": {
         description: "Show help about commands.",
