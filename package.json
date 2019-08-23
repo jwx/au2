@@ -1,0 +1,33 @@
+{
+  "name": "au2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "bin": {
+    "au2": "bin/au2.js"
+  },
+  "scripts": {
+    "start": "node lib/index.js",
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test2": "echo \"Error: no test2 specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwx/au2.git"
+  },
+  "author": "Jürgen Wenzel <jurgen@jwenzel.se> (http://in90seconds.jwenzel.se)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jwx/au2/issues"
+  },
+  "homepage": "https://github.com/jwx/au2#readme",
+  "devDependencies": {
+    "cross-spawn": "^6.0.5",
+    "rollup": "^1.20.0"
+  }
+}
