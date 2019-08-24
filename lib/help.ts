@@ -26,7 +26,10 @@ function outputHelp(cmd, help) {
     const mainPad = 3;
     let out = "\n" + ''.padEnd(mainPad) + `${cmd}\n`;
     if (help.description) {
-        out += ''.padEnd(mainPad * 2) + `${help.description}\n`;
+        const descriptions = help.description.split('\n');
+        for (const description of descriptions) {
+          out += ''.padEnd(mainPad * 2) + `${description}\n`;
+        }
     }
     if (help.args && help.args.length) {
         const pad = Math.max(...help.args.map(arg => Object.keys(arg)[0].length));
@@ -61,6 +64,8 @@ function makeHelps(commands, scriptCommands, helps) {
         if (!command.help) {
             command.help = makeScriptHelp(scriptCommands[cmd]);
             command.scriptHelp = true;
+        } else {
+          command.help.description = (command.help.description || '') + '\n' + makeScriptHelp(scriptCommands[cmd]).description;
         }
         result[cmd] = command;
     }
